@@ -47,3 +47,12 @@ class InfoCollector:
             rankings.append(_rankings)
         return rankings
 
+    def get_comments(self):
+        elem_ranking_items = self._get_ranking_items()
+        comments = []
+        for elem_ranking_item in elem_ranking_items:
+            _comments = []
+            for comment in elem_ranking_item.find_elements_by_class_name("comment"):
+                _comments.append(comment.text)
+            comments.append(_comments)
+        return comments
