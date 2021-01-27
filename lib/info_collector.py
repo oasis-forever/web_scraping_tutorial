@@ -57,8 +57,8 @@ class InfoCollector:
 
     def export_csv(self, titles, evaluations, categories, rankings, path):
         df = pd.DataFrame()
-        df["Title"] = titles
-        df["Evaluation"] = evaluations
+        df["観光地"] = titles
+        df["総合評価"] = evaluations
         df_rankings = pd.DataFrame(rankings)
         df_rankings.columns = categories
         df = pd.concat([df, df_rankings], axis=1)
