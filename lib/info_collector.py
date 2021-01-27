@@ -1,8 +1,6 @@
 from selenium import webdriver
 import pandas as pd
 import sys
-sys.path.append("./concerns")
-from list_handler import uniq_list
 
 class InfoCollector:
     def __init__(self, url):

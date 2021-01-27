@@ -1,7 +1,6 @@
 import unittest
 import sys
 sys.path.append("../lib")
-sys.path.append("../lib/concerns")
 import os.path
 from os import path
 from info_collector import InfoCollector
@@ -9,7 +8,7 @@ from info_collector import InfoCollector
 class TestInfoCollector(unittest.TestCase):
     def setUp(self):
         self.info_collector = InfoCollector("https://scraping-for-beginner.herokuapp.com/ranking/")
-    
+
     def test_get_titles(self):
         self.assertEqual([
             "観光地 1",
