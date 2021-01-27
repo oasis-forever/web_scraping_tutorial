@@ -9,6 +9,10 @@ class InfoCollector:
         self.chrome = webdriver.Chrome(executable_path="../exec/chromedriver.exe")
         self.chrome.get(url)
 
+    def _get_ranking_items(self):
+        elem_ranking_items = self.chrome.find_elements_by_class_name("u_categoryTipsItem")
+        return elem_ranking_items
+
     def get_titles(self):
         elem_titles = self.chrome.find_elements_by_class_name("u_title")
         titles = []
