@@ -16,3 +16,9 @@ class InfoCollector:
             titles.append(elem_title.text.split("\n")[-1])
         return titles
 
+    def get_evaluations(self):
+        elem_rank_boxes = self.chrome.find_elements_by_class_name("u_rankBox")
+        evaluations = []
+        for elem_rank_box in elem_rank_boxes:
+            evaluations.append(float(elem_rank_box.find_element_by_class_name("evaluateNumber").text))
+        return evaluations

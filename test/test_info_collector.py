@@ -24,5 +24,19 @@ class TestInfoCollector(unittest.TestCase):
             "観光地 10",
         ], self.info_collector.get_titles())
 
+    def test_get_evaluations(self):
+        self.assertEqual([
+            4.7,
+            4.7,
+            4.6,
+            4.5,
+            4.5,
+            4.4,
+            4.3,
+            4.3,
+            4.2,
+            4.1
+        ], self.info_collector.get_evaluations())
+
 if __name__ == "__main__":
     unittest.main()
