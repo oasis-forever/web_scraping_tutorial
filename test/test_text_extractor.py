@@ -3,15 +3,15 @@ import sys
 sys.path.append("../lib")
 import os.path
 from os import path
-from web_scraper import WebScraper
+from text_extractor import TextExtractor
 
-class TestWebScraper(unittest.TestCase):
+class TestTextExtractor(unittest.TestCase):
     def setUp(self):
-        self.web_scraper = WebScraper("https://scraping-for-beginner.herokuapp.com/login_page")
-        self.web_scraper.login("imanishi", "kohei")
+        self.text_extractor = TextExtractor("https://scraping-for-beginner.herokuapp.com/login_page")
+        self.text_extractor.login("imanishi", "kohei")
 
     def test_get_lecturer_info(self):
-        profile, *_ = self.web_scraper.get_lecturer_info()
+        profile, *_ = self.text_extractor.get_lecturer_info()
         self.assertEqual({
             "講師名": "今西 航平",
             "所属企業": "株式会社キカガク",
@@ -21,8 +21,8 @@ class TestWebScraper(unittest.TestCase):
         }, profile)
 
     def test_export_csv(self):
-        _, keys, vals = self.web_scraper.get_lecturer_info()
-        self.web_scraper.export_csv(keys, vals, "../csv/lecturer_info.csv")
+        _, keys, vals = self.text_extractor.get_lecturer_info()
+        self.text_extractor.export_csv(keys, vals, "../csv/lecturer_info.csv")
         self.assertEqual(True, path.exists("../csv/lecturer_info.csv"))
 
 if __name__ == "__main__":

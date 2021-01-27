@@ -1,7 +1,7 @@
 from selenium import webdriver
 import pandas as pd
 
-class WebScraper:
+class TextExtractor:
     def __init__(self, url):
         self.chrome = webdriver.Chrome(executable_path="../exec/chromedriver.exe")
         self.chrome.get(url)
