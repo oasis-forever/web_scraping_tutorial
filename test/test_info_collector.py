@@ -38,5 +38,8 @@ class TestInfoCollector(unittest.TestCase):
             4.1
         ], self.info_collector.get_evaluations())
 
+    def test_get_categories(self):
+        self.assertEqual(["楽しさ", "人混みの多さ", "景色", "アクセス"], self.info_collector.get_categories())
+
 if __name__ == "__main__":
     unittest.main()
