@@ -1,4 +1,5 @@
 from selenium import webdriver
+import pandas as pd
 
 class WebScraper:
     def __init__(self, url):
@@ -28,4 +29,10 @@ class WebScraper:
         profile = {}
         for i in range(len(keys)):
             profile[keys[i]] = vals[i]
-        return profile
+        return profile, keys, vals
+
+    def export_csv(self, keys, vals, path):
+        df = pd.DataFrame()
+        df["Keys"] = keys
+        df["Values"] = vals
+        df.to_csv(path)
