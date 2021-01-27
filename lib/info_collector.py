@@ -37,3 +37,13 @@ class InfoCollector:
             categories.append(_categories)
         return categories[0]
 
+    def get_rankings(self):
+        elem_ranking_items = self._get_ranking_items()
+        rankings = []
+        for elem_ranking_item in elem_ranking_items:
+            _rankings = []
+            for ranking in elem_ranking_item.find_elements_by_class_name("is_rank"):
+                _rankings.append(float(ranking.text))
+            rankings.append(_rankings)
+        return rankings
+
