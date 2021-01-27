@@ -56,3 +56,12 @@ class InfoCollector:
                 _comments.append(comment.text)
             comments.append(_comments)
         return comments
+
+    def export_csv(self, titles, evaluations, categories, rankings, path):
+        df = pd.DataFrame()
+        df["Title"] = titles
+        df["Evaluation"] = evaluations
+        df_rankings = pd.DataFrame(rankings)
+        df_rankings.columns = categories
+        df = pd.concat([df, df_rankings], axis=1)
+        df.to_csv(path)

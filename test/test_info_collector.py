@@ -9,7 +9,7 @@ from info_collector import InfoCollector
 class TestInfoCollector(unittest.TestCase):
     def setUp(self):
         self.info_collector = InfoCollector("https://scraping-for-beginner.herokuapp.com/ranking/")
-
+    
     def test_get_titles(self):
         self.assertEqual([
             "観光地 1",
@@ -69,6 +69,14 @@ class TestInfoCollector(unittest.TestCase):
     #         ["一人旅には最適でした", "時間帯によって混雑具合は違った", "大自然を感じることができた", "アクセスはあまり良くなかった"],
     #         ["THE非日常", "お昼の時間はかなり混んでいた", "目を疑う超絶景であった", "渋滞に巻き込まれて3時間以上かかった"]
     #     ], self.info_collector.get_comments())
+
+    def test_export_csv(self):
+        titles = self.info_collector.get_titles()
+        evaluations = self.info_collector.get_evaluations()
+        categories = self.info_collector.get_categories()
+        rankings = self.info_collector.get_rankings()
+        self.info_collector.export_csv(titles, evaluations, categories, rankings, "../csv/tour_reviews.csv")
+        self.assertEqual(True, path.exists("../csv/tour_reviews.csv"))
 
 if __name__ == "__main__":
     unittest.main()
