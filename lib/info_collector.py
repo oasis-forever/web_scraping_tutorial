@@ -1,6 +1,8 @@
 from selenium import webdriver
 import pandas as pd
 import sys
+sys.path.append("./concerns")
+from list_handler import *
 
 class InfoCollector:
     def __init__(self, url):
@@ -27,32 +29,17 @@ class InfoCollector:
 
     def get_categories(self):
         elem_ranking_items = self._get_ranking_items()
-        categories = []
-        for elem_ranking_item in elem_ranking_items:
-            _categories = []
-            for dt in elem_ranking_item.find_elements_by_tag_name("dt"):
-                _categories.append(dt.text)
-            categories.append(_categories)
+        categories = tag_elems_list(elem_ranking_items, "dt")
         return categories[0]
 
     def get_rankings(self):
         elem_ranking_items = self._get_ranking_items()
-        rankings = []
-        for elem_ranking_item in elem_ranking_items:
-            _rankings = []
-            for ranking in elem_ranking_item.find_elements_by_class_name("is_rank"):
-                _rankings.append(float(ranking.text))
-            rankings.append(_rankings)
+        rankings = class_elems_list(elem_ranking_items, "is_rank")
         return rankings
 
     def get_comments(self):
         elem_ranking_items = self._get_ranking_items()
-        comments = []
-        for elem_ranking_item in elem_ranking_items:
-            _comments = []
-            for comment in elem_ranking_item.find_elements_by_class_name("comment"):
-                _comments.append(comment.text)
-            comments.append(_comments)
+        comments = class_elems_list(elem_ranking_items, "comment")
         return comments
 
     def export_csv(self, titles, evaluations, categories, rankings, path):

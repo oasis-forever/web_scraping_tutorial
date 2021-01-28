@@ -1,6 +1,7 @@
 import unittest
 import sys
 sys.path.append("../lib")
+sys.path.append("../lib/concerns")
 import os.path
 from os import path
 from info_collector import InfoCollector
