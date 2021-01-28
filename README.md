@@ -86,6 +86,9 @@ chrome = webdriver.Firefox()
 ### 6-2. More Complicated DOM scraping
 
 * Product Code: [`./lib/info_collector.py`](https://github.com/oasis-forever/web_scraping_tutorial/blob/master/lib/info_collector.py)
+  * Modules:
+    * [`./lib/concerns/decimal_handler.py`](https://github.com/oasis-forever/web_scraping_tutorial/blob/master/lib/concerns/decimal_handler.py),
+    * [`./lib/concerns/list_handler.py`](https://github.com/oasis-forever/web_scraping_tutorial/blob/master/lib/concerns/list_handler.py), 
 * Test Code: [`./test/test_info_collector.py`](https://github.com/oasis-forever/web_scraping_tutorial/blob/master/test/test_info_collector.py)
 * CSV: [`./csv/tour_reviews.csv`](https://github.com/oasis-forever/web_scraping_tutorial/blob/master/csv/tour_reviews.csv)
 
