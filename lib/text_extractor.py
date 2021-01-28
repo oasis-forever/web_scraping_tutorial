@@ -33,6 +33,6 @@ class TextExtractor:
 
     def export_csv(self, keys, vals, path):
         df = pd.DataFrame()
-        df["Keys"] = keys
-        df["Values"] = vals
+        df["項目"] = keys
+        df["値"] = vals
         df.to_csv(path)
