@@ -14,11 +14,8 @@ class TestImageCollector(unittest.TestCase):
         self.assertEqual(24, len(self.image_collector.get_images()))
 
     def test_save_images(self):
-        images = self.image_collector.get_images()
-        i = 1
-        for image in images:
-            self.image_collector.save_image(image, "../img/image_{:0=2}.jpg".format(i))
-            i += 1
+        self.image_collector.get_images()
+        self.image_collector.save_images("../img/image_{:0=2}.jpg")
         self.assertEqual(True, path.exists("../img/image_01.jpg"))
         self.assertEqual(True, path.exists("../img/image_02.jpg"))
         self.assertEqual(True, path.exists("../img/image_03.jpg"))
