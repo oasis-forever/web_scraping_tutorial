@@ -12,7 +12,7 @@
 
 PythonによるWebスクレイピング \~入門編\~ 業務効率化への第一歩 - Udemy
 
-## 3. Blog Post
+## 3. Blog Posts
 
 * [Web Scraping in Python + Selenium Vol.1 - Simple DOM -](https://oasist-blog-en.hatenablog.jp/entry/web_scraping_in_python_selenium_vol1)
 * [Web Scraping in Python + Selenium Vol.2 - More Complicated DOM -](https://oasist-blog-en.hatenablog.jp/entry/web_scraping_in_python_selenium_vol2)
