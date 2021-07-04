@@ -14,9 +14,9 @@ PythonによるWebスクレイピング \~入門編\~ 業務効率化への第�
 
 ## 3. Blog Posts
 
-* [Web Scraping in Python + Selenium Vol.1 - Simple DOM -](https://oasist-blog-en.hatenablog.jp/entry/web_scraping_in_python_selenium_vol1)
-* [Web Scraping in Python + Selenium Vol.2 - More Complicated DOM -](https://oasist-blog-en.hatenablog.jp/entry/web_scraping_in_python_selenium_vol2)
-* [Web Scraping in Python + Selenium Vol.3 - Image Collection -](https://oasist-blog-en.hatenablog.jp/entry/web_scraping_in_python_selenium_vol3)
+* [Web Scraping in Python + Selenium Vol.1 -Simple DOM-](https://oasist-tech-notes.hatenablog.com/entry/en/web-scraping-in-python-plus-selenium/vol1)
+* [Web Scraping in Python + Selenium Vol.2 -More Complicated DOM-](https://oasist-tech-notes.hatenablog.com/entry/en/web-scraping-in-python-plus-selenium/vol2)
+* [Web Scraping in Python + Selenium Vol.3 -Image Collection-](https://oasist-tech-notes.hatenablog.com/entry/en/web-scraping-in-python-plus-selenium/vol3)
 
 ## 4. Clone the repository
 
